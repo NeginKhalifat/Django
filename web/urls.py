@@ -8,7 +8,7 @@ app_name:'web'
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('main/',include('main.urls')),
+    path('shop/',include('shop.urls')),
     path('',views.homepage,name="home"),
     path('accounts/',include('accounts.urls'))
 ]
