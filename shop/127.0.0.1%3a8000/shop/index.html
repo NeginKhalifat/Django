@@ -1,4 +1,4 @@
-{% load static from staticfiles%}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,10 +8,34 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>Document</title>
     <style>
-      .h5{
-  margin-left:40px
+      
+.col-md-3
+{
+display: inline-block;
+margin-left:-4px;
 }
-      {% block css %} {% endblock %}
+.carousel-indicators .active {
+background-color: blue;
+  }
+.col-md-3 img{
+width:200px;
+height:180PX;
+}
+body .carousel-indicator li{
+background-color: blue;
+}
+body .carousel-indicators{
+bottom: 0;
+}
+body .carousel-control-prev-icon,
+body .carousel-control-next-icon{
+background-color: blue;
+}
+ body .no-padding{
+ padding-left: 0,
+ padding-right: 0
+ }
+
  </style>
 </head>
 <body>
@@ -47,26 +71,15 @@
                 <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
               </form>
-              {% if user.is_authenticated %}
+              
               <li>
-                  <form class ="logout_form"action="{% url 'accounts:logout' %}"  method="post">
-                      {% csrf_token %} 
+                  <form class ="logout_form"action="/accounts/logout/"  method="post">
+                      <input type="hidden" name="csrfmiddlewaretoken" value="UcPcCsNfRbgeEfNQg29uNzb0RtwV3af07Wp7HbyMZYfGK7QZsx1Fc5oRwUUhukYr"> 
                       <button class="btn btn-secondary" type="submit">Logout</button>
                   </form> 
               </li>  
                
-              {% else %}
-                 <button
-                  type="button" class="btn btn-secondary"> <a href="{% url 'accounts:login' %}">
-                      Login
-                  </a>
-                </button>
-                <button
-                type="button" class="btn btn-dark"> <a href="{% url 'accounts:signup' %}">
-                    Sign up 
-                </a>
-              </button>   
-              {% endif %}
+              
       </nav>
       <div class="alert alert-success alert-dismissible fade show" role="alert">
         <strong>Wellcome !</strong> You should check in on some of those fields below.
@@ -78,12 +91,76 @@
     
  
   
- {% block content %}
-    {% endblock %}
+ 
+
+<div class="container">
+    <div id="demo" class="carousel slide my-3" data-ride="carousel">
+        <ul class="carousel-indicators">
+            
+            <li data-target="#demo" data-slide-to="1" class="active"></li>
+            
+            <li data-target="#demo" data-slide-to="1" class="active"></li>
+            
+        </ul>
+    
+        <!--Slideshow starts here -->
+        <div class="container carousel-inner no-padding">
+    
+          <div class="carousel-item active">
+        
+           
+           <div class="col-xs-3 col-sm-3 col-md-3">
+             <div class="card" style="width: 18rem;">
+               <img src='/media/lamborghini_100631781_h.jpg' class="card-img-top" alt="...">
+               <div class="card-body">
+                 <h5 class="card-title">car</h5>
+                 <p class="card-text">neg</p>
+                 <a href="#" class="btn btn-primary">Add To Cart</a>
+               </div>
+             </div>
+           </div>
+           
+   
+           
+           <div class="col-xs-3 col-sm-3 col-md-3">
+             <div class="card" style="width: 18rem;">
+               <img src='/media/117000_0_PM99_1.JPG' class="card-img-top" alt="...">
+               <div class="card-body">
+                 <h5 class="card-title">pencil</h5>
+                 <p class="card-text">neg</p>
+                 <a href="#" class="btn btn-primary">Add To Cart</a>
+               </div>
+             </div>
+           </div>
+           
+   
+           
+       </div>
+   
+   
+   
+        <!-- left and right controls for the slide -->
+        <a class="carousel-control-prev" href="#demo" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#demo" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </a>
+    
+    
+    
+    
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+  
+
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
-    {% block js %} {% endblock %}
+     
 </body>
 </html>
 
