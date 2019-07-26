@@ -15,6 +15,7 @@ def index(request):
         nslides = n//4 + ceil((n/4)-n//4)
         allProds.append([prod,range(1,nslides),nslides])
     params = {'allProds':allProds}
+    print(allProds)
     return render(request, 'shop/index.html',params)
 
 def about(request):

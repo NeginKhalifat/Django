@@ -11,7 +11,8 @@ def logIn(request):
             login(request,user)
             if 'next' in request.POST:
                 return redirect(request.POST.get('next'))
-            return redirect('web:home')
+            msg='welocme back'
+            return redirect('shop:ShopHome')
     else:
         form=AuthenticationForm()
     return render(request,'accounts/login.html',{'form':form})
@@ -25,7 +26,7 @@ def signup(request):
         if form.is_valid():
             user = form.save()
             login(request,user)
-            return redirect('web:home')
+            return redirect('shop:ShopHome')
     else:
         form=UserCreationForm()
     return render(request,'accounts/signup.html',{'form':form})
@@ -35,4 +36,4 @@ def signup(request):
 def logOut(request):
     if request.method == 'POST':
         logout(request)
-        return redirect('web:home')
+        return redirect('shop:ShopHome')

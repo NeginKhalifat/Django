@@ -1,0 +1,337 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=h1, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+      .h5{
+  margin-left:40px;
+}
+.logout{
+  margin-bottom: 15px;
+  margin-top: 30px;
+  display: inline;
+}
+      
+.col-md-3
+{
+display: inline-block;
+margin-left:-4px;
+
+margin-left:60px;
+}
+
+
+.carousel-indicators .active {
+background-color: blue;
+  }
+
+.col-md-3 img{
+
+  width: 286px;
+          height: 230px;
+}
+.carousel-item {
+  heigth:20px;
+}
+
+body .carousel-indicator li{
+background-color: blue;
+}
+
+body .carousel-indicators{
+bottom: 0;
+}
+
+body .carousel-control-prev-icon,
+body .carousel-control-next-icon{
+background-color: blue;
+}
+
+.carousel-control-prev,
+.carousel-control-next{
+top: auto;
+bottom: auto;
+padding-top:200px;
+}
+ body .no-padding{
+ padding-left: 0,
+ padding-right: 0;
+ }
+
+ </style>
+</head>
+<body>
+   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Home Page</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Features</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Pricing</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Dropdown link
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="#">Cart(<span id="cart">0</span>)</a>
+            </li>
+          </ul>
+        </div>
+            <form class="form-inline">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+             
+              </form>
+              
+              <li>
+                  <form class ="logout_form"action="/accounts/logout/"  method="post">
+                      <input type="hidden" name="csrfmiddlewaretoken" value="bYX99B37VbUmkt77RZjS3b96gUKznJt3NDYgZoYRL5rzYuEUtC0iJVNmn2262PCD"> 
+                      <button class="btn btn-secondary logout" type="submit">Logout</button>
+                  </form> 
+              </li>  
+               
+              
+      
+        </nav>
+      <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <strong>Wellcome !</strong> You should check in on some of those fields below.
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+     
+    
+ 
+  
+ 
+
+<div class="container">
+  
+  <h5 style="margin-left: 40px">apparel</h5>
+  <div class="row">
+    <div id="demo1" class="col carousel slide my-3" data-ride="carousel">
+        <ul class="carousel-indicators">
+            <li data-target="#demo1" data-slide-to="0" class="active"></li>
+
+            
+        </ul>
+    
+        <!--Slideshow starts here -->
+        <div class="container carousel-inner no-padding">
+          <div class="carousel-item active">
+            
+           
+           <div class="col-xs-3 col-sm-3 col-md-3">
+             <div class="card" style="width: 18rem;">
+               <img src='/media/leviv20389128eb_q1_2-0._UX357_QL90_.jpg' class="card-img-top" alt="...">
+               <div class="card-body">
+                 <h5 class="card-title">levis jeans</h5>
+                 <p class="card-text">neg</p>
+                 <button id="pr4" class="btn btn-primary cart">Add To Cart</button>
+               </div>
+             </div>
+           </div>
+           
+   
+           
+       </div>
+   
+   
+      </div>
+    </div>
+ <!-- left and right controls for the slide -->
+ <a class="carousel-control-prev" href="#demo1" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+</a>
+<a class="carousel-control-next" href="#demo1" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+</a>
+    
+    </div>  
+ 
+  <h5 style="margin-left: 40px">tools</h5>
+  <div class="row">
+    <div id="demo2" class="col carousel slide my-3" data-ride="carousel">
+        <ul class="carousel-indicators">
+            <li data-target="#demo2" data-slide-to="0" class="active"></li>
+
+            
+        </ul>
+    
+        <!--Slideshow starts here -->
+        <div class="container carousel-inner no-padding">
+          <div class="carousel-item active">
+            
+           
+           <div class="col-xs-3 col-sm-3 col-md-3">
+             <div class="card" style="width: 18rem;">
+               <img src='/media/117000_0_PM99_1.JPG' class="card-img-top" alt="...">
+               <div class="card-body">
+                 <h5 class="card-title">pencil</h5>
+                 <p class="card-text">neg</p>
+                 <button id="pr3" class="btn btn-primary cart">Add To Cart</button>
+               </div>
+             </div>
+           </div>
+           
+   
+           
+       </div>
+   
+   
+      </div>
+    </div>
+ <!-- left and right controls for the slide -->
+ <a class="carousel-control-prev" href="#demo2" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+</a>
+<a class="carousel-control-next" href="#demo2" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+</a>
+    
+    </div>  
+ 
+  <h5 style="margin-left: 40px">electronic-devices</h5>
+  <div class="row">
+    <div id="demo3" class="col carousel slide my-3" data-ride="carousel">
+        <ul class="carousel-indicators">
+            <li data-target="#demo3" data-slide-to="0" class="active"></li>
+
+            
+        </ul>
+    
+        <!--Slideshow starts here -->
+        <div class="container carousel-inner no-padding">
+          <div class="carousel-item active">
+            
+           
+           <div class="col-xs-3 col-sm-3 col-md-3">
+             <div class="card" style="width: 18rem;">
+               <img src='/media/download.jpg' class="card-img-top" alt="...">
+               <div class="card-body">
+                 <h5 class="card-title">iphone XS max</h5>
+                 <p class="card-text">neg</p>
+                 <button id="pr5" class="btn btn-primary cart">Add To Cart</button>
+               </div>
+             </div>
+           </div>
+           
+   
+           
+       </div>
+   
+   
+      </div>
+    </div>
+ <!-- left and right controls for the slide -->
+ <a class="carousel-control-prev" href="#demo3" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+</a>
+<a class="carousel-control-next" href="#demo3" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+</a>
+    
+    </div>  
+ 
+  <h5 style="margin-left: 40px">vehicles</h5>
+  <div class="row">
+    <div id="demo4" class="col carousel slide my-3" data-ride="carousel">
+        <ul class="carousel-indicators">
+            <li data-target="#demo4" data-slide-to="0" class="active"></li>
+
+            
+        </ul>
+    
+        <!--Slideshow starts here -->
+        <div class="container carousel-inner no-padding">
+          <div class="carousel-item active">
+            
+           
+           <div class="col-xs-3 col-sm-3 col-md-3">
+             <div class="card" style="width: 18rem;">
+               <img src='/media/lamborghini_100631781_h.jpg' class="card-img-top" alt="...">
+               <div class="card-body">
+                 <h5 class="card-title">car</h5>
+                 <p class="card-text">neg</p>
+                 <button id="pr2" class="btn btn-primary cart">Add To Cart</button>
+               </div>
+             </div>
+           </div>
+           
+   
+           
+       </div>
+   
+   
+      </div>
+    </div>
+ <!-- left and right controls for the slide -->
+ <a class="carousel-control-prev" href="#demo4" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+</a>
+<a class="carousel-control-next" href="#demo4" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+</a>
+    
+    </div>  
+ 
+ 
+  
+</div>
+ 
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    
+        <script>
+        console.log('hi')
+        if (localStorage.getItem('cart')==null){
+          var cart={};
+        }
+        else{
+          cart=JSON.parse(localStorage.getItem('cart'));
+          document.getElementById('cart').innerHTML = Object.keys(cart).length;
+          
+        }
+        $('.cart').click(function(){
+          console.log('clicked');
+          var idstr= this.id.toString();
+          console.log(idstr);
+          if(cart[idstr] != undefined){
+
+            cart[idstr]+=1;
+          }
+          else{
+            cart[idstr]=1;
+          }
+          console.log(cart);
+          localStorage.setItem('cart',JSON.stringify(cart));
+          document.getElementById('cart').innerHTML=Object.keys(cart).length;
+        });
+        </script>
+  
+</body>
+</html>
+
+
