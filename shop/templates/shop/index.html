@@ -11,6 +11,7 @@ margin-left:60px;
 
 .carousel-indicators .active {
 background-color: blue;
+ left:80px; top:20px;
   }
 
 .col-md-3 img{
@@ -27,7 +28,8 @@ background-color: blue;
 }
 
 body .carousel-indicators{
-bottom: 0;
+    bottom: -35px;
+
 }
 
 body .carousel-control-prev-icon,
@@ -57,7 +59,7 @@ padding-top:200px;
             <li data-target="#demo{{forloop.counter}}" data-slide-to="0" class="active"></li>
 
             {% for i in range %}
-            <li data-target="#demo{{forloop.parentloop.counter}}" data-slide-to="{{i}}" class="active"></li>
+            <li data-target="#demo{{forloop.parentloop.counter}}" data-slide-to="{{i}}" class="active" style="margin-top:10px; margin-button:20px"></li>
             {% endfor %}
         </ul>
     
@@ -73,6 +75,8 @@ padding-top:200px;
                  <h5 class="card-title">{{i.name}}</h5>
                  <p class="card-text">{{i.owner}}</p>
                  <button id="pr{{i.id}}" class="btn btn-primary cart">Add To Cart</button>
+                 
+               <a href="/shop/productview/{{i.id}}"><button id="qv{{i.id}}" class="btn btn-primary cart">Quick View</button></a>  
                </div>
              </div>
            </div>
@@ -102,7 +106,7 @@ padding-top:200px;
  {% endblock %}
  {% block js %}
         <script>
-        console.log('hi')
+        console.log('hi');
         if (localStorage.getItem('cart')==null){
           var cart={};
         }
@@ -126,5 +130,8 @@ padding-top:200px;
           localStorage.setItem('cart',JSON.stringify(cart));
           document.getElementById('cart').innerHTML=Object.keys(cart).length;
         });
+        
+$('#popcart').popover();
+document.getElementById('popcart').setAttribute('data-content','<h5>Your shopping cart</h5>');
         </script>
   {% endblock %}

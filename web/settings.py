@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'snowpenguin.django.recaptcha2',
     'accounts',
     'stuff',
     'main',
@@ -46,7 +47,8 @@ INSTALLED_APPS = [
     
     
 ]
-
+RECAPTCHA_PRIVATE_KEY = '6LfeGbIUAAAAAL6cFWivTBBwlOKp64TSG4tcP1mY'
+RECAPTCHA_PUBLIC_KEY = '6LfeGbIUAAAAAOikhodtBMzPsKgKa1lSqK_wMFhm'
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
